@@ -1,17 +1,23 @@
 bookdown::gitbook:
   css: style.css
+  split_bib: FALSE # change to TRUE to have refs at end of chapter
   config:
     toc:
       before: |
-        <li><a href="./">A Minimal Book Example</a></li>
+        <li><a href="./index.html">A Minimal Book Example</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/<yourname>/bookdown-demo/edit/master/%s
-    download: ["pdf", "epub"]
-bookdown::pdf_book:
-  includes:
-    in_header: preamble.tex
-  latex_engine: xelatex
-  citation_package: natbib
-  keep_tex: yes
-bookdown::epub_book: default
+    download: null 
+    # change to download: ["pdf"] or ["pdf", "epub"] to download these
+# uncomment these lines to add a link to github source and links to download
+  # edit: https://github.com/<yourname>/bookdown-demo/edit/master/%s
+# Uncomment these lines if you want to make a pdf
+# bookdown::pdf_book:
+#   includes:
+#     in_header: preamble.tex
+#   latex_engine: xelatex
+
+# To see the config options for HTML go to
+# https://bookdown.org/yihui/bookdown/html.html
+#   citation_package: natbib
+# bookdown::epub_book: default
